@@ -5,6 +5,8 @@
 - [A Developer's Daily Life](english_bosnian/story_developer.md) - Follow a programmer's workday
 - [A Developer's Daily Routine](english_bosnian/story_developer2.md) - Another day in a developer's life
 - [Programmer Troubles](english_bosnian/story_developer3.md) - Debugging adventures
+- [Horror Story](english_bosnian/horror_story.md) - A Spooky Night at the Abandoned House
+- [Horror Story 2](english_bosnian/horror_story2.md) - Strange Footsteps in the Dark Forest
 
 ## English-German Stories
 - [Morning at the Coffee Shop](english_german/coffeeshop.md) - Order coffee and chat
@@ -19,11 +21,10 @@ The story should describe a morning at the coffee shop and include plenty of dia
 
 1) Images / Placeholders:
     The Markdown should include image placeholders that reference text-to-image prompts.
-    Each placeholder should be a unique hash-like string (to avoid duplicates).
-    For example: ![HASH](HASH)
+    For example: ![PLACEHOLDER](PLACEHOLDER)
 2) JSON at the top:
     At the very beginning of the Markdown file, provide a JSON object mapping each hash placeholder to its descriptive text-to-image prompt.
-    The format should be {HASH: "PROMPT", ...}.
+    The format should be {PLACEHOLDER: "PROMPT", ...}.
     Do not prefix this JSON with backticks + json or any other code fence.
 3) Include English translations:
     Alongside each sentence or paragraph, include an English translation for language learners.
