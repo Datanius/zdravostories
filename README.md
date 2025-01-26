@@ -14,7 +14,8 @@
 # Prompt
 
 ```
-Please write a short, coherent story in German (A1/A2 level) in Markdown for a language learning book. The story should describe a morning at the coffee shop and include plenty of dialogue to help learners practice everyday conversations.
+Please write a short, coherent story in German (A1/A2 level) in Markdown for a language learning book. 
+The story should describe a morning at the coffee shop and include plenty of dialogue to help learners practice everyday conversations.
 
 1) Images / Placeholders:
     The Markdown should include image placeholders that reference text-to-image prompts.
