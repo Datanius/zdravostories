@@ -1,6 +1,6 @@
 # Programerske nevolje (Programmer Troubles)
 
-![Img_3f9d1b04](images\3f9d1b04.png)      
+![Img_3f9d1b04](images/3f9d1b04.png)      
 
 **Bosanski (A1/A2):**  
 Marko je programer u jednoj maloj kompaniji. Danas ima problem: njegov program se ne pokreće.  
@@ -22,7 +22,7 @@ Marko sits at the table and looks at the screen. He thinks:
 **Jasna (coworker):** "Have you checked all the variables?"  
 **Marko:** "I have, but I can't find what's wrong."
 
-![Img_0f27422f](images\0f27422f.png)      
+![Img_0f27422f](images/0f27422f.png)      
 
 **Bosanski:**  
 Nakon nekoliko minuta, Jasna prilazi Marku da zajedno pogledaju kod. Otvaraju editor i čitaju liniju po liniju.  
@@ -76,7 +76,7 @@ Marko mijenja tip promenljive i pokreće kod. Program sada radi bez problema.
 **English:**  
 Marko changes the variable type and runs the code. The program now works without any issues.
 
-![Img_c739b20b](images\c739b20b.png)      
+![Img_c739b20b](images/c739b20b.png)      
 
 **Bosanski (Dijalog):**  
 **Marko:** "Hvala ti, Jasna! Spasila si me. Sada ću završiti zadatak."  

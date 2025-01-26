@@ -1,7 +1,7 @@
 # Svakodnevni život programera  
 ## Dnevna rutina  
 
-![Img_a1b2c3d4](images\a1b2c3d4.png)        
+![Img_a1b2c3d4](images/a1b2c3d4.png)        
 
 **Jutro**  
 "Dobro jutro! Kafa je spremna?" pita Amir svoju suprugu Anu.  
@@ -15,7 +15,7 @@
 
 ---
 
-![Img_e5f6g7h8](images\e5f6g7h8.png)        
+![Img_e5f6g7h8](images/e5f6g7h8.png)        
 
 **Posao**  
 Amir šalje poruku kolegi: "Imaš li grešku u kodu?"  
@@ -29,7 +29,7 @@ The colleague replies: "No, it’s working. Check the server!"
 
 ---
 
-![Img_i9j0k1l2](images\i9j0k1l2.png)        
+![Img_i9j0k1l2](images/i9j0k1l2.png)        
 
 **Kraj dana**  
 "Ana, danas smo riješili veliki problem!" kaže Amir.  

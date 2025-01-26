@@ -1,5 +1,5 @@
 # Ein Morgen im Café  
-![Img_1a2b3c](images\Img_1a2b3c.png)        
+![Img_1a2b3c](images/1a2b3c.png)        
 *Lena betritt das Café. Es riecht nach frischem Kaffee.*  
 *(Lena enters the café. It smells like fresh coffee.)*
 
@@ -12,7 +12,7 @@
 **Lena:** Nein danke. Oh, und bitte einen Löffel.  
 *(No thank you. Oh, and a spoon please.)*  
 
-![Img_4d5e6f](images\Img_4d5e6f.png)        
+![Img_4d5e6f](images/4d5e6f.png)        
 *Lena setzt sich an einen kleinen Tisch. Der Barista bringt ihre Bestellung.*  
 *(Lena sits at a small table. The barista brings her order.)*
 
@@ -23,7 +23,7 @@
 **Lena:** Hier bitte. Schönen Tag noch!  
 *(Here you go. Have a nice day!)*  
 
-![Img_j0k1l2](images\Img_j0k1l2.png)        
+![Img_j0k1l2](images/j0k1l2.png)        
 *Lena trinkt ihren Kaffee und liest eine Zeitung. Nach 20 Minuten steht sie auf.*  
 *(Lena drinks her coffee and reads a newspaper. After 20 minutes she gets up.)*
 
@@ -32,7 +32,7 @@
 **Barista:** Danke! Bis zum nächsten Mal!  
 *(Thank you! Until next time!)*  
 
-![Img_m3n4o5](images\Img_m3n4o5.png)        
+![Img_m3n4o5](images/m3n4o5.png)        
 
 ## Wichtige Wörter / Important Words
 - **der Kaffee** (coffee) [kah-FEY]

@@ -1,6 +1,6 @@
 # Jutro u Kafiću / Morning at the Coffee Shop
 
-![Img_Sd3f9A](images\Sd3f9A.png)      
+![Img_Sd3f9A](images/Sd3f9A.png)      
 
 **Bosanski (A1/A2)**  
 Jutros sam ušao u mali kafić. Prostorija je bila topla i mirisala je na svježe pečenu kafu.  
@@ -20,7 +20,7 @@ At the entrance, the waitress greets me:
 - **Waitress**: "Of course! Would you also like a piece of cake with your coffee?"  
 - **Me**: "I'll have a small chocolate cake, thank you."
 
-![Img_Gh21sK](images\Gh21sK.png)      
+![Img_Gh21sK](images/Gh21sK.png)      
 
 **Bosanski**  
 Sjedam za sto kraj prozora. Sunce sija kroz staklo i osvjetljava cijelu prostoriju.  
@@ -38,7 +38,7 @@ The waitress comes over and brings coffee and cake.
 - **Waitress**: "Here you are, coffee and a chocolate cake. If you need anything else, let me know."  
 - **Me**: "Thank you very much."
 
-![Img_P9zK12](images\P9zK12.png)      
+![Img_P9zK12](images/P9zK12.png)      
 
 **Bosanski**  
 Ubrzo mi prilazi mlada žena sa osmijehom:  

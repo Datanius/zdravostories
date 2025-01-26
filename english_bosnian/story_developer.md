@@ -1,6 +1,6 @@
 # Svakodnevni život programera / A Developer's Daily Life
 
-![Img_a1b2c3](images\a1b2c3.png)        
+![Img_a1b2c3](images/a1b2c3.png)        
 *Programer pije kafu dok radi na kompjuteru*  
 *The programmer drinks coffee while working on the computer*
 
@@ -12,7 +12,7 @@
 
 ---
 
-![Img_d4e5f6](images\d4e5f6.png)        
+![Img_d4e5f6](images/d4e5f6.png)        
 *Dvoje ljudi diskutuje oko belog table s kodom*  
 *Two people discuss around a whiteboard with code*
 
@@ -24,7 +24,7 @@ Alen se smije: "Hvala, sad sam riješio problem!"
 
 ---
 
-![Img_7g8h9i](images\7g8h9i.png)        
+![Img_7g8h9i](images/7g8h9i.png)        
 *Noćni pogled na kompjuter s upaljenim ekranom*  
 *Night view of a computer with glowing screen*
 
