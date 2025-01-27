@@ -7,8 +7,15 @@ from typing import Dict, Optional
 
 import requests
 from dotenv import load_dotenv
+from PIL import Image
+import io
 
 load_dotenv()
+
+# Image generation settings
+IMAGE_WIDTH = 640  # Multiple of 32
+IMAGE_HEIGHT = 352  # Multiple of 32, 16:9 ratio
+ASPECT_RATIO = "16:9"
 
 class ImageGenerationError(Exception):
     pass
@@ -21,7 +28,8 @@ class ImageGenerator:
             
         self.api_urls = {
             'dev': "https://api.us1.bfl.ai/v1/flux-dev",
-            'prod': "https://api.us1.bfl.ai/v1/flux-pro-1.1", 
+            'pro': "https://api.us1.bfl.ai/v1/flux-pro-1.1", 
+            'ultra': "https://api.us1.bfl.ai/v1/flux-pro-1.1-ultra",
             'status': "https://api.us1.bfl.ai/v1/get_result"
         }
         
@@ -30,7 +38,7 @@ class ImageGenerator:
         self.initial_delay = 2  # seconds
         self.backoff_factor = 2
 
-    def generate(self, prompt: str) -> Optional[str]:
+    def generate(self, prompt: str, model: str = 'pro') -> Optional[str]:
         headers = {
             "Content-Type": "application/json",
             "X-Key": self.api_key
@@ -38,13 +46,17 @@ class ImageGenerator:
         
         data = {
             "prompt": f"Generate in a cartoonish style: {prompt}",
-            "width": "640",  # Multiple of 32
-            "height": "352", # Multiple of 32, 16:9 ratio
             "output_format": "png"
         }
+
+        if model == 'ultra':
+            data["aspect_ratio"] = ASPECT_RATIO
+        else:
+            data["width"] = str(IMAGE_WIDTH)
+            data["height"] = str(IMAGE_HEIGHT)
         
         try:
-            response = requests.post(self.api_urls['prod'], headers=headers, json=data)
+            response = requests.post(self.api_urls[model], headers=headers, json=data)
             response.raise_for_status()
             return response.json().get('id')
         except requests.exceptions.RequestException as e:
@@ -78,11 +90,18 @@ class ImageProcessor:
     def __init__(self, image_dir: str = "images"):
         self.image_dir = image_dir
 
-    def download_image(self, image_url: str, save_path: Path) -> bool:
+    def download_image(self, image_url: str, save_path: Path, model: str = 'pro') -> bool:
         try:
             response = requests.get(image_url)
             response.raise_for_status()
-            save_path.write_bytes(response.content)
+            
+            if model == 'ultra':
+                # Process ultra model images to correct size
+                image = Image.open(io.BytesIO(response.content))
+                image = image.resize((IMAGE_WIDTH, IMAGE_HEIGHT), Image.Resampling.LANCZOS)
+                image.save(save_path, 'PNG', quality=95)
+            else:
+                save_path.write_bytes(response.content)
             return True
         except requests.exceptions.RequestException:
             return False
@@ -119,6 +138,7 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description='Generate images from markdown file prompts')
     parser.add_argument('markdown_file', type=Path, help='Path to markdown file containing image prompts')
+    parser.add_argument('--model', choices=['pro', 'ultra'], default='pro', help='Model version to use')
     args = parser.parse_args()
 
     markdown_dir = args.markdown_file.parent
@@ -139,7 +159,7 @@ def main():
             hash_obj = hashlib.md5(prompt.encode())
             unique_hash = f"Img_{hash_obj.hexdigest()[:6]}"
             
-            task_id = generator.generate(prompt)
+            task_id = generator.generate(prompt, model=args.model)
             if not task_id:
                 continue
                 
@@ -148,7 +168,7 @@ def main():
                 continue
                 
             image_path = image_dir / f"{unique_hash}.png"
-            if processor.download_image(image_url, image_path):
+            if processor.download_image(image_url, image_path, model=args.model):
                 # Force forward slash in path
                 replacements[placeholder] = f"images/{unique_hash}.png"
                 
