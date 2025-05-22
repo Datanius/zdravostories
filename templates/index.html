@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Stories</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Language Learning Stories</h1>
+    </header>
+    <div class="container">
+        {% for lang, stories in stories.items() %}
+            <h2>{{ lang.title() }}</h2>
+            <ul class="story-list">
+            {% for story in stories %}
+                <li><a href="/story/{{ lang }}/{{ story }}">{{ story.replace('_', ' ') }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</body>
+</html>
