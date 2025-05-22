@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Stories</title>
+</head>
+<body>
+    <h1>Available Stories</h1>
+    {% for lang, stories in stories.items() %}
+        <h2>{{ lang.title() }}</h2>
+        <ul>
+        {% for story in stories %}
+            <li><a href="/story/{{ lang }}/{{ story }}">{{ story.replace('_', ' ') }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
