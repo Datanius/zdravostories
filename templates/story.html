@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{ title.replace('_', ' ') }}</h1>
+    </header>
+    <div class="container">
+        <p><a href="/">&#8592; Back to list</a></p>
+        <div class="story-content">
+            {{ content|safe }}
+        </div>
+    </div>
+</body>
+</html>
